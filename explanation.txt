@@ -1,0 +1,22 @@
+Rewards: Pass through pipes: +10, Game Over: -10
+
+Actions [0, 1] = Do nothing, [1,0] = Jump
+
+Game State: [self.ball.y, self.ball.velocity, self.pipes[0].top_pipe, self.pipes[0].bottom_pipe, maybe self.score,]
+
+Model: Feed forward Neural Network, 4 input, 2 output
+Softmax output layer
+
+Training: Deep Q learning, wheere Q Value = quality of action 
+0. Init Q Value
+1. Choose action (model.predict(state))
+2. Perform action, may be random move
+3. Measure reward 
+4. Update Q Value + train model 
+
+Bellman Equation 
+
+
+
+
+

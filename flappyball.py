@@ -1,6 +1,7 @@
 import pygame
 import random
-import numpy as np
+import numpy as numpy
+
 
 pygame.init()
 
@@ -84,7 +85,6 @@ class Game:
         if self.game_over is False:
             return np.array([self.ball.y, self.ball.velocity, self.pipes[0].top_pipe, self.pipes[0].bottom_pipe, self.score,])
 
-
     def run(self):
         clock = pygame.time.Clock()
         while True:
@@ -121,7 +121,9 @@ class Game:
                     print("you died... lol")
                     print(self.score)
             pygame.display.flip()
-            print(self.game_state())
+            #print(self.game_state())
+
+
 
 game = Game()
 game.run()
